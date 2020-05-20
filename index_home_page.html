@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+​
+<head>
+  <meta charset="utf-8">
+  <title>Top 100 Golf Courses</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.4/components/dropdowns/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="css/map_style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <body class="container-fluid body-design">
+      <header>
+        <div class="d-flex flex-column mb-3 bg-white sm-bg-blue">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light sm-bg-blue navbar-expand-sm">
+            <a class="navbar-brand title text-wrap" href="index_home_page.html">Home</a>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item">
+                    <a class="nav-link sm-bg-blue" href="scatter.html">Graphis</a>
+                </li> -->
+                <li>
+                    <a class="nav-link sm-bg-blue" href="course_info.html">Course Info</a>    
+                </li>
+                <li>
+                  <a class="nav-link sm-bg-blue" href="course_attributes.html">Course Attributes</a>    
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>    
+  </nav>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">2019-2020 Top 100 Golf Course in the US</h1>
+      <p class="lead">All of the information you need to know about every great golf course in America.</p>
+    </div>
+  </div>
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div class="col-lg-12">
+        <h3>Map of the top 100 Ranked Course in the U.S. 2019-2020</h3>
+        <p>Source: Golf Digest</p>
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="footer">
+    <p>Created by Tim McCabe</p>
+  </div> -->
+
+    <!-- API key -->
+    <script type="text/javascript" src="js/config.js"></script>
+    <!-- Our JS -->
+    <script type="text/javascript" src="js/map.js"></script>
+
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  
+</body>

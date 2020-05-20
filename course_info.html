@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+​
+<head>
+  <meta charset="utf-8">
+  <title>Course Info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.4/components/dropdowns/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/map_style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <body class="container-fluid body-design">
+      <header>
+        <div class="d-flex flex-column mb-3 bg-white sm-bg-blue">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light sm-bg-blue navbar-expand-sm">
+            <a class="navbar-brand title text-wrap" href="index_home_page.html">Home</a>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item">
+                    <a class="nav-link sm-bg-blue" href="scatter.html">Graphis</a>
+                </li> -->
+                <li>
+                    <a class="nav-link sm-bg-blue" href="course_info.html">Course Info</a>    
+                </li>
+                <li>
+                  <a class="nav-link sm-bg-blue" href="course_attributes.html">Course Attributes</a>    
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>    
+  </nav>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">2019-2020 Top 100 Golf Course in the US</h1>
+          <p class="lead">All of the information you need to know about every great golf in America.</p>
+        </div>
+    </div>
+    <div>
+      <p>This data was collected from the Golf Digest website and the link can be found below:</p>
+        <a href="https://www.golfdigest.com/gallery/americas-100-greatest-golf-courses-ranking">Course Attributes and Methodology Data</a>
+    </div>
+        <table id="golf-table" class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th onClick="sortTable(0)">Rank</th>
+              <th onClick="sortTable(1)">Course Name</th>
+              <th onClick="sortTable(2)">Yards</th>
+              <th onClick="sortTable(3)">Par</th>
+              <th onClick="sortTable(4)">Points</th>
+              <th onClick="sortTable(5)">Location</th>
+              <th onClick="sortTable(6)">Architect</th>
+              <th onClick="sortTable(7)">Year Built</th>
+              <th onClick="sortTable(8)">Restoration Architect</th>
+              <th onClick="sortTable(9)">Year Restored</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <!-- <div class="footer">
+          <p>Created by Tim McCabe</p>
+        </div> -->
+
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="js/course_info.js"></script>
+</body>

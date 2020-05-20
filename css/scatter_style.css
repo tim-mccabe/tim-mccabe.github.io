@@ -1,0 +1,83 @@
+body {
+  background-color: lightgray;
+}
+
+.chart::before {
+    position: absolute;
+    top: 25px;
+    left: 120px;
+    z-index: -1;
+    display: block;
+    width: 750px;
+    height: 385px;
+    content: " ";
+    background-image: url("/images/Amen-Corner.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    opacity: 0.3;
+  }
+  
+  .tooltip {
+    position: absolute;
+    width: 135px;
+    height: 90px;
+    padding: 2px;
+    padding-top: 8px;
+    font: 12px sans-serif;
+    color: green;
+    text-align: center;
+    background: yellow;
+    border: 0;
+    border-radius: 10px;
+  }
+  
+  .axis-text {
+    font-family: sans-serif;
+    font-weight: bold;
+    fill: #551aaf;
+    text-anchor: middle;
+  }
+  
+  .active {
+    font-weight: bold;
+    fill: #000;
+    fill: #551aaf;
+    transition: fill 0.3s ease-out;
+    text-anchor: middle;
+  }
+  
+  .inactive {
+    font-weight: lighter;
+    fill: #551aaf;
+    transition: fill 0.3s ease-out;
+    text-anchor: middle;
+  }
+  
+  .inactive:hover {
+    fill: #e75480;
+    cursor: pointer;
+  }
+  
+  .hero text-center {
+    position: relative;
+    height: 250px;
+    padding: 1px;
+    margin: 0;
+    background: rgb(255, 255, 255);
+    /* background-image: url("/images/golf_image.jpg"); */
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: cover;
+  }
+  
+  .hero h1 {
+    margin-top: 85px;
+    font-size: 3em;
+    font-weight: 400;
+    color: rgb(255, 255, 255)
+  }
+
+  #hero-image {
+    background-image: url("/images/golf_image.jpg");
+  }

@@ -1,0 +1,101 @@
+Rank,Course_Name,Yards,Par,Points,Location,Architect,Year_Built,Restoration_Architect,Year_Restored,Latitude,Longitude
+1,PINE VALLEY G.C.,7181,70,72.0078,Pine Valley N.J.,George Crump & H.S. Colt,1918,Tom Fazio,2017,39.792235,-74.972227
+2,AUGUSTA NATIONAL G.C.,7435,72,71.5810,Augusta Ga.,Alister MacKenzie & Bobby Jones,1933,Tom Fazio,2018,33.502354,-82.022577
+3,CYPRESS POINT CLUB,6524,72,69.6830,Pebble Beach Cal.,Alister MacKenzie & Robert Hunter,1929,Jeff Markow,2004,36.580509,-121.974148
+4,SHINNECOCK HILLS G.C.,7445,70,69.2526,Shinnecock Hills N.Y.,William Flynn,1931,Bill Coore & Ben Crenshaw,2012,40.894252,-72.439777
+5,OAKMONT C.C.,7255,71,68.9218,Oakmont Pa.,Henry Fownes,1903,Tom Fazio,2014,40.526148,-79.82686899999999
+6,MERION G.C. (East),6996,70,67.8860,Marion Pa.,Hugh Wilson,1912,Gil Hanse,2018,40.002115,-75.311825
+7,PEBBLE BEACH G. LINKS,6828,72,67.5261,Pebble Beach Cal.,Jack Neville & Douglas Grant,1919,Arnold Palmer & Thad Layton,2016,36.569888,-121.949766
+8,NATIONAL G. LINKS OF AMERICA,6935,72,67.3855,Southampton N.Y.,C.B. Macdonald,1911,Karl Olson,1994,40.915639,-72.449685
+9,SAND HILLS G.C.,7089,71,66.3549,Sand Hills N.E.,Bill Coore & Ben Crenshaw,1995,(Original Design),(Original Design),41.855487,-101.092794
+10,FISHERS ISLAND CLUB,6615,70,66.1937,Fishers Island N.Y.,Seth Raynor & Charles Banks,1926,Gil Hanse,2000,41.280167999999996,-71.948782
+11,WINGED FOOT G.C. (West),7426,72,66.1885,Mamaroneck N.Y.,A.W. Tillinghast,1923,Gil Hanse,2017,40.957914,-73.753538
+12,SEMINOLE G.C.,6836,72,65.9329,Juno Beach Fla.,Donald Ross,1929,Bill Coore & Ben Crenshaw,2017,26.860346000000003,-80.04735
+13,CRYSTAL DOWNS C.C.,6560,70,65.6377,Frankfort Mich.,Alister MacKenzie & Perry Maxwell,1931,Tom Doak,2018,44.702604,-86.23465300000001
+14,CHICAGO G.C.,6877,70,65.5659,Wheaton Ill.,C.B. Macdonald,1894,Seth Raynor & Tom Doak,1922 & 2002,41.849607,-88.115714
+15,FRIAR'S HEAD G.C.,7071,71,65.2092,Baiting Hollow N.Y.,Bill Coore & Ben Crenshaw,2002,(Original Design),(Original Design),40.965569,-72.725673
+16,MUIRFIELD VILLAGE G.C.,7392,72,65.2030,Dublin Ohio,Jack Nicklaus & Desmond Muirhead,1974,Jack Nicklaus,2015,40.140718,-83.14094399999999
+17,PACIFIC DUNES,6633,71,64.9775,Bandon Ore.,Tom Doak,2001,(Original Design),(Original Design),43.193806,-124.389921
+18,THE COUNTRY CLUB (Clyde/Squirrel),6753,70,64.9361,Chestnut Hill Mass.,Willie Campbell,1895,Alex Campbell & Gil Hanse,1902 & 2012,42.315031,-71.147826
+19,LOS ANGELES C.C. (North),7530,71,64.7659,Los Angeles,George C. Thomas Jr. & Gil Hanse,1921,Geoff Shackelford & Jim Wagner,2010,34.071313,-118.423381
+20,OAKLAND HILLS C.C. (South),7445,72,64.7535,Bloomfield Hills Mich.,Donald Ross,1917,Rees Jones,2006,42.545085,-83.277016
+21,WHISTLING STRAITS (Straits),7790,72,64.6465,Haven Wis.,Pete Dye,1998,(Original Design),(Original Design),43.851259000000006,-87.73513100000001
+22,OAK HILL C.C. (East),7152,70,64.6417,Rochester N.Y.,Donald Ross,1925,Tom Fazio,2010,43.113044,-77.532834
+23,RIVIERA C.C.,7040,71,64.5878,Pacific Palisades Calif.,George C. Thomas Jr. & W.P. Bell,1926,Tom Fazio,2012,34.050069,-118.501323
+24,THE OCEAN COURSE,7356,72,64.5348,Kiawah Island S.C.,Pete Dye & Alice Dye,1991,Pete Dye,2011,32.640882,-80.02986899999999
+25,WADE HAMPTON G.C.,7395,72,64.4646,Cashiers N.C.,Tom Fazio,1987,Tom Fazio,2018,35.090405,-83.07496
+26,SHADOW CREEK,7560,72,64.2344,North Las Vegas Nev.,Tom Fazio & Steve Wynn,1990,Tom Fazio,2008,36.258654,-115.107324
+27,PRAIRIE DUNES C.C.,6947,70,64.0759,Hutchinson Kan.,Perry Maxwell,1937,Press Maxwell & Dave Axland,1957 & 2014,38.091643,-97.847999
+28,THE HONORS COURSE,7450,72,63.9746,Ooltewah Tenn.,Pete Dye,1983,Pete Dye,2008,35.087497,-85.04414399999999
+29,PINEHURST RESORT (No. 2),7588,72,63.8172,Pinehurst N.C.,Donald Ross,1935,Bill Coore & Ben Crenshaw,2010,35.196264,-79.473608
+30,PEACHTREE G.C.,7414,72,63.7396,Atlanta,Robert Trent Jones & Bobby Jones,1947,Bob Cupp,2005,33.877129,-84.32696700000001
+31,THE ALOTIAN CLUB,7500,72,63.7310,Roland Ark.,Tom Fazio,2004,(Original Design),(Original Design),34.857623,-92.577013
+32,GOZZER RANCH G. & LAKE C.,7317,72,63.7068,Harrison Idaho,Tom Fazio,2007,(Original Design),(Original Design),47.617354,-116.76623300000001
+33,THE OLYMPIC CLUB (Lake),6934,71,63.6777,San Francisco,Sam Whiting,1924,Bill Love,2016,37.709886,-122.494657
+34,SOUTHERN HILLS C.C.,7184,71,63.4031,Tulsa Okla.,Perry Maxwell,1936,Gil Hanse,2018,36.070384999999995,-95.94548
+35,SAN FRANCISCO G.C.,6836,71,63.3742,San Francisco,A.W. Tillinghast,1924,(Original Design),(Original Design),37.71174,-122.47647099999999
+36,BANDON DUNES,6732,72,63.3655,Bandon Ore.,David McLay Kidd,1999,(Original Design),(Original Design),43.186003,-124.39086999999999
+37,BETHPAGE STATE PARK (Black),7465,71,63.2976,Farmingdale N.Y.,Joseph H. Burbeck & A.W. Tillinghast,1936,Rees Jones,2015,40.745954,-73.452899
+38,THE GOLF CLUB,7439,72,63.1712,New Albany Ohio,Pete Dye,1967,Pete Dye,2013,40.066741,-82.785987
+39,SEBONACK G.C.,7512,72,63.1402,Southampton N.Y.,Jack Nicklaus & Tom Doak,2006,(Original Design),(Original Design),40.911007,-72.455751
+40,PIKEWOOD NATIONAL G.C.,7649,72,63.0881,Morgantown W. Va.,J. Robert Gwynne & John Raese,2009,(Original Design),(Original Design),39.537713000000004,-79.867076
+41,BALTUSROL G.C. (Lower),7400,72,63.0290,Springfield N.J.,A.W. Tillinghast,1922,Rees Jones,2014,40.705217,-74.327997
+42,ERIN HILLS G. CSE.,7800,72,62.7609,Erin Wis.,Michael Hurdzan & Dana Fry & Ron Whitten,2006,Dana Fry,2013,43.246134999999995,-88.398494
+43,VICTORIA NATIONAL G.C.,7242,72,62.7167,Newburgh Ind.,Tom Fazio,1998,(Original Design),(Original Design),38.00098,-87.346458
+44,CAMARGO CLUB,6659,70,62.7111,Indian Hill Ohio,Seth Raynor & Charles Banks,1927,Tom Doak,2000,39.181217,-84.333969
+45,SPYGLASS HILL G. CSE.,6960,72,62.6761,Pebble Beach,Robert Trent Jones,1966,Tom Fazio,1996,36.582518,-121.95831899999999
+46,BALLYNEAL G.C.,7147,71,62.6718,Holyoke Colo.,Tom Doak,2006,(Original Design),(Original Design),40.419593,-102.26279699999999
+47,BUTLER NATIONAL G.C.,7523,71,62.5935,Oak Brook Ill.,George Fazio & Tom Fazio,1974,Tom Fazio,2012,41.840779,-87.933245
+48,CASTLE PINES G.C.,7701,72,62.5820,Castle Rock Colo.,Jack Nicklaus,1981,Jack Nicklaus & Jim Lipe,2015,39.442721999999996,-104.898651
+49,TPC SAWGRASS (Players Stadium),7245,72,62.4413,Ponte Verde Beach Fla.,Pete Dye & Alice Dye,1980,Steve Wenzloff,2016,30.199933,-81.393834
+50,OLD MACDONALD,6944,71,62.4135,Bandon Ore.,Tom Doak & Jim Urbina,2010,(Original Design),(Original Design),43.185824,-124.39090800000001
+51,GARDEN CITY G.C.,6922,73,62.4125,Garden City N.Y.,Devereux Emmet,1899,Walter Travis & Tom Doak,1913 & 2015,40.7257,-73.6432
+52,WINGED FOOT G.C. (East),6808,72,62.3774,Mamaroneck N.Y.,A.W. Tillinghast,1923,Gil Hanse,2012,40.9595,-73.7545
+53,MEDINAH C.C. (No. 3),7657,72,62.3690,Medinah Ill.,Tom Bendelow,1928,Rees Jones,2009,41.9665,-88.04804399999999
+54,WHISPERING PINES G.C.,7473,72,62.2766,Trinity Texas,Chet Williams,2000,(Original Design),(Original Design),30.945786,-95.25021
+55,SHOREACRES,6729,70,62.2752,Lake Bluff Ill.,Seth Raynor,1921,(Original Design),(Original Design),42.298417,-87.840612
+56,MONTEREY PENINSULA C.C. (Shore),6873,72,62.2081,Pebble Beach,Mike Strantz,2004,(Original Design),(Original Design),36.603455,-121.948617
+57,SCIOTO C.C.,7140,70,62.1702,Columbus Ohio,Donald Ross,1916,Michael Hurdzan & Jack Nicklaus,2008,40.007474,-83.07520699999999
+58,INTERLACHEN C.C.,6981,72,62.1545,Edina Minn.,Willie Watson,1911,Brian Silva,2006,44.915414,-93.380033
+59,OLD SANDWICH G.C.,6908,71,62.1544,Plymouth Mass.,Bill Coore & Ben Crenshaw,2005,(Original Design),(Original Design),41.904963,-70.606797
+60,OAK TREE NATIONAL,7410,71,62.1249,Edmond Okla.,Pete Dye & Alice Dye,1976,Tripp Davis,2012,35.719808,-97.505376
+61,BALTUSROL G.C. (Upper),7348,72,62.0814,Springfield N.J.,A.W. Tillinghast,1922,Rees Jones,2014,40.705222,-74.327968
+62,CANYATA G.C.,7266,72,62.0771,Marshall Ill.,Bob Lohmann & Mike Benkusky,2004,(Original Design),(Original Design),39.469871000000005,-87.683776
+63,SOMERSET HILLS C.C.,6784,71,62.0366,Bernardsville N.J.,A.W. Tillinghast,1918,Tom Doak,2018,40.723527000000004,-74.588352
+64,PETE DYE G.C.,7308,72,62.0220,Bridgeport W.Va.,Pete Dye,1994,(Original Design),(Original Design),39.710179,-80.302832
+65,DALLAS NATIONAL G.C.,7372,72,61.9804,Dallas,Tom Fazio,2002,(Original Design),(Original Design),32.733711,-96.903139
+66,KINLOCH G.C.,7203,72,61.9740,Manakin-Sabot Va,Lester George & Vinny Giles,2001,(Original Design),(Original Design),37.636181,-77.687369
+67,MAIDSTONE CLUB,6665,72,61.9365,East Hampton N.Y.,Willie Park Jr. & Jack Park,1924,Bill Coore & Ben Crenshaw,2013,40.951797,-72.174592
+68,ARCADIA BLUFFS G.C.,7300,72,61.9264,Arcadia Mich.,Rick Smith & Warren Henderson,2000,(Original Design),(Original Design),44.456862,-86.242552
+69,BANDON TRAILS,6788,71,61.8574,Bandon Ore.,Bill Coore & Ben Crenshaw,2005,(Original Design),(Original Design),43.185068,-124.39108799999998
+70,THE ESTANCIA CLUB,7314,72,61.8021,Scottsdale,Tom Fazio,1995,(Original Design),(Original Design),33.738170000000004,-111.865178
+71,QUAKER RIDGE G.C.,7008,70,61.7439,Scarsdale N.Y.,A.W. Tillinghast,1918,Gil Hanse,2011,40.965934999999995,-73.761651
+72,CHERRY HILLS C.C.,7348,72,61.7080,Cherry Hills Village Colo.,William Flynn,1923,Tom Doak,2009,39.643128000000004,-104.962483
+73,ESSEX COUNTY CLUB,6555,70,61.6472,Manchester Mass.,Donald Ross,1917,Tom Doak,2008,42.584047999999996,-70.763529
+74,MILWAUKEE C.C.,7097,72,61.6431,River Hills Wis.,H.S. Colt & C.H. Alison,1929,Tom Doak,2015,43.166821,-87.941941
+75,OLYMPIA FIELDS C.C. (North),7190,70,61.6376,Olympia Fields Ill.,Willie Park Jr.,1922,Mark Mungeam,2014,41.52197,-87.685463
+76,MYOPIA HUNT CLUB,6539,72,61.5754,South Hamilton Mass.,H.C. Leeds,1898,Gil Hanse,2013,42.609401,-70.858082
+77,THE QUARRY AT LA QUINTA,7083,72,61.5487,La Quinta Calif.,Tom Fazio,1994,(Original Design),(Original Design),33.624565000000004,-116.274267
+78,KITTANSETT CLUB,6811,71,61.5483,Marion Mass.,William Flynn & Frederic Hood,1922,Gil Hanse,2012,41.677727000000004,-70.717343
+79,MONTEREY PENINSULA C.C. (Dunes),7090,72,61.5296,Pebble Beach Cal.,Seth Raynor,1924,Tom Fazio &Tim Jackson & David Kahn,2015,36.601777,-121.94833500000001
+80,CONGRESSIONAL C.C. (Blue),7570,72,61.5115,Bethesda Md.,Robert Trent Jones,1962,Rees Jones,2010,38.996438,-77.176478
+81,HUDSON NATIONAL G.C.,7151,70,61.4845,Croton-on-Hudson N.Y.,Tom Fazio,1996,Tom Fazio,2015,41.220223,-73.900734
+82,PLAINFIELD C.C.,7091,72,61.4727,Edison N.J.,Donald Ross,1921,Gil Hanse,2010,40.594661,-74.389916
+83,CALUSA PINES G.C.,7203,72,61.4559,Naples Fla.,Michael Hurdzan & Dana Fry,2001,(Original Design),(Original Design),26.258963,-81.671666
+84,VALHALLA G.C.,7540,72,61.3786,Louisville,Jack Nicklaus,1987,Jack Nicklaus,2012,38.242849,-85.472042
+85,ARONIMINK G.C.,7267,70,61.3607,Newtown Square Pa.,Donald Ross,1928,Gil Hanse,2017,40.011815999999996,-75.409086
+86,THE VALLEY CLUB OF MONTECITO,6610,72,61.3551,Montecito Calif.,Alister MacKenzie & Robert Hunter,1929,Tom Doak,2018,34.43327,-119.61531799999999
+87,BOSTON G.C.,7062,71,61.3515,Hingham Mass.,Gil Hanse,2004,(Original Design),(Original Design),42.193373,-70.89778000000001
+88,INVERNESS CLUB,7323,71,61.3320,Toledo Ohio,Donald Ross,1919,Andrew Green,2018,41.742691,-83.643563
+89,SLEEPY HOLLOW C.C,6902,70,61.3308,C.B. Macdonald,A.W. Tillinghast,1915,Gil Hanse,2017,41.124194,-73.861501
+90,DIAMOND CREEK G.C.,7175,70,61.2075,Banner Elk N.C.,Tom Fazio,2003,(Original Design),(Original Design),36.15275,-81.835581
+91,THE G.C. AT BLACK ROCK,7130,72,61.2020,Coeur d’Alene Idaho,Jim Engh,2003,(Original Design),(Original Design),47.511562,-116.87041
+92,DOUBLE EAGLE CLUB,7175,72,61.1950,Galena Ohio,Jay Morrish & Tom Weiskopf,1992,(Original Design),(Original Design),40.24345,-82.949656
+93,SPRING HILL G.C.,7035,72,61.1569,Wayzata Minn.,Tom Fazio,1999,(Original Design),(Original Design),44.997298,-93.540912
+94,RICH HARVEST LINKS,7704,72,61.1128,Sugar Grove Ill.,Jerry Rich & Greg Martin,1999,Jerry Rich, 2012,41.753862,-88.486464
+95,YEAMANS HALL CLUB,6808,70,61.0890,Charleston S.C.,Seth Raynor & Charles Banks,1926,Jim Urbina, 2016,32.926513,-79.977907
+96,THE PRESERVE G.C.,7138,72,61.0619,Carmel Calif.,Tom Fazio  & J. Michael Poellot & Sandy Tatum,2000,Tom Fazio,2015,36.534669,-121.86853899999998
+97,BLACKWOLF RUN (River),7404,72,61.0451,Kohler Wis.,Pete Dye,1990,Pete Dye,2010,43.727082,-87.77591600000001
+98,OLD TOWN CLUB,7038,70,61.0033,Winston-Salem N.C.,Perry Maxwell,1939,Bill Coore & Ben Crenshaw,2013,36.124646999999996,-80.271688
+99,CROOKED STICK G.C.,7516,72,60.9908,Carmel Ind.,Pete Dye,1967,Pete Dye,2008,39.946528,-86.19302900000001
+100,MAYACAMA G.C.,6761,71,60.9746,Santa Rosa Calif.,Jack Nicklaus,2001,(Original Design),(Original Design),38.528184,-122.733709
