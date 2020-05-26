@@ -3,13 +3,19 @@
 ​
 <head>
   <meta charset="utf-8">
-  <title>Course Attributes</title>
+  <title>Top 100 Golf Courses</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="canonical" href="https://getbootstrap.com/docs/4.4/components/dropdowns/">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
   <link rel="stylesheet" href="css/map_style.css">
 </head>
 
@@ -39,42 +45,32 @@
           </nav>
         </div>    
   </nav>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">2019-2020 Top 100 Golf Course in the US</h1>
-          <p class="lead">All of the information you need to know about every great golf in America.</p>
-        </div>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">2019-2020 Top 100 Golf Course in the US</h1>
+      <p class="lead">All of the information you need to know about every great golf course in America.</p>
     </div>
-    <div>
-      <p>This data was collected from the Golf Digest website and the link can be found below:</p>
-        <a href="https://www.golfdigest.com/story/how-our-panel-ranks-the-courses">Course Attributes and Methodology Data</a>
+  </div>
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div class="col-lg-12">
+        <h3>Map of the top 100 Ranked Course in the U.S. 2019-2020</h3>
+        <p>Source: Golf Digest</p>
+        <div id="map"></div>
+      </div>
     </div>
-    <div>
-      <p>The intersting thing about the data is that something might be missing. If you add up the scores of all of the attribute, it does not equal the Total Score shown. 
-        It looks like Golf Digest is missing a category of data which gives each courses its final total.</p>
-    </div>
-        <table id="golf-table" class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th onClick="sortTable(0)">Rank</th>
-              <th onClick="sortTable(1)">Course Name</th>
-              <th onClick="sortTable(2)">Shot Value</th>
-              <th onClick="sortTable(3)">Resistance to Scoring</th>
-              <th onClick="sortTable(4)">Design Variety</th>
-              <th onClick="sortTable(5)">Memorability</th>
-              <th onClick="sortTable(6)">Aesthatics</th>
-              <th onClick="sortTable(7)">Conditioning</th>
-              <th onClick="sortTable(8)">Ambiance</th>
-              <th onClick="sortTable(9)">Total Score</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+  </div>
 
-        <!-- <div class="footer">
-          <p>Created by Tim McCabe</p>
-        </div> -->
+  <!-- <div class="footer">
+    <p>Created by Tim McCabe</p>
+  </div> -->
 
-    <script src="https://d3js.org/d3.v5.js"></script>
-    <script src="js/course_attributes.js"></script>
+    <!-- API key -->
+    <script type="text/javascript" src="js/config.js"></script>
+    <!-- Our JS -->
+    <script type="text/javascript" src="js/map.js"></script>
+
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  
 </body>
