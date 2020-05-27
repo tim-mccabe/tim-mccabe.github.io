@@ -409,3 +409,20 @@ footer .copyright {
   font-size: 16px;
   padding: 25px 35px;
 }
+
+.btn-secondary {
+  color: #fff;
+  background-color: gainsboro;
+  border-color: darkslategray;
+}
+
+.btn-group {
+  margin: 50px;
+}
+
+#map {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  display: inline-block;
+}
