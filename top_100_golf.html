@@ -95,11 +95,27 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Golf Digest provides tons of insights about what are the best courses in the United States and how they stad up to one another. But the website has never provided a map that shows where each one of these exactly is. I put together this map for people to be able to see everythin across the country and to hopefully plan a golf trip to a location where someone could play a few of these in one trip.</p>
+          <p>Golf Digest provides significant insight into the best courses in the United States and how they compare to one another. 
+            But the website fails to provide a map that shows where each course is located, especially in relation to each other. I put together this map for avid golfers to be able 
+            to see the top 100 courses across the country and to plan multi-course golf trips with ease.
+          </p>
 
           <div id="map"></div>
 
-          <p>There is nothing worse then planning a golf trip months in advance only to find out there was another top 100 course 30 minutes away that you didnt know about. Hopefully people can use this map in all fo there trips going forward to get the most out of golfing adventures.</p>
+          <p>There is nothing worse than planning a golf trip months in advance only to find out there was another top 100 course 30 minutes away that you didnt know about. 
+            Hopefully golfers can use this map in planning all of their trips going forward to get the most out of golfing adventures.
+          </p>
+
+          <p>This data was collected by creating a web-scraping app that took the HTLM elements from the Golf Digest website. Once those we all collected, 
+            some cleaning needed to be done in orded to create nice clean tables. Since there was no where to scrape the latitude and longitude of each course, 
+            I had to google each one individually. This data set only has 100 data points so it was relatively easy to do in about 2 hours. If this data set was larger,
+            I would have had to create a program to google locations and collect the data from that. Since it was so small I thought it would be faster to do it mannually. 
+            After all of the data was collected, I used a Jupyter Notebook and CSV editor to clean the data and make everything in a nice presentable way.
+          </p>
+
+          <p>Once the data was collected and cleaned, I used D3.js to create the sortable tables so that anyone could look at all of the data points in an easy way. 
+            After that was done, I used Leaflet along with D3.js to create a clean map with some pop-ups to provide info about the course.
+          </p>
 
           <p>Course rankings by
             <a href="https://www.golfdigest.com/gallery/americas-100-greatest-golf-courses-ranking">Golf Digest</a>. Photographs by

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Kepler Exoplanets</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/home_page.css" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Blog</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tim-mccabe">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/tim-mccabe-88a0a091/">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('Images/kepler.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Machine Learning: Exoplanet Exploration</h1>
+            <h2 class="subheading">Kaggle Dataset from The Keplar Space Observatory</h2>
+            <span class="meta">Posted by
+              <a href="#">Tim McCabe</a>
+              on May 29, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>Over a period of nine years in deep space, the NASA Kepler space telescope has been out on a planet-hunting mission to 
+              discover hidden planets outside of our solar system. To help process this data, I created two machine learning models 
+              capable of classifying candidate exoplanets from the raw dataset.
+            </p>
+
+            <p>The approach used for creating these models was based around using the Python library Scikit-learn. This library is extremely useful when dealing with numerical data, 
+                similar to the data provided by the <a href="https://www.kaggle.com/nasa/kepler-exoplanet-search-results">Kepler Space Observatory</a>. The first step with any dataset 
+                is to read in the data and perform some basic cleaning. The next step is to select the features (columns of data) and create a train test split. This basically separates 
+                the data you want to use in order to predict an outcome and then creates two groups of data. One group of data to train your model and another to test it. In simpler terms, 
+                the data will get get randomly sorted into two groups, one group contain roughly 70% of the data points and the second group will have the other 30%. The separation does not have 
+                to be exactly 70% / 30% split but this is pretty common for most models. The larger set of data will be used to run algorithms on and make predictions and the smaller set of data 
+                will be used as a comparison for those predictions to see how accurate they are.
+            </p>
+
+            <p>
+                Before running any type of algorithm to make predictions, the data mus be pre-processed (scaled). Once this is done, it is time to train the model. There are so many ways to 
+                train models and as a Data Scientist or Machine Learning Engineer, it is up to you to decide which is the best method of training. The <a href="https://github.com/tim-mccabe/machine-learning-challenge/blob/master/starter_code/Kepler_svm.ipynb">first model</a>
+                run on the data was an SVM (support-vector machines), which was fairly accurate in detrmining the outcome. However, it is important to train and test multiple models to insure 
+                reliability and accuracy.
+            </p>
+
+            <img class="img-fluid" src="Images/svm_example.png" alt="">
+
+            <p>
+                Support Vector Machine visualization
+            </p>
+
+            <img class="img-fluid" src="Images/svm.jpg" alt="">
+
+            <p>
+                SVM model results
+            </p>
+
+            <p>
+                Hyperparameter tuning is the next step to making the most accurate predictions. Hyperparameter tuning in a nut shell is deciding what features should be going into 
+                the model. For example, as a Data Scientist, this is where you would have to decide how deep a decision tree should be, what features go into a linear model, or how many 
+                neurons and layers will go into a neural network. There are so many more examples but it would be too long to list. The next model tested was a Random Forest Model. 
+                Below is a chart displaying each features importance which is extremely helpful when hyperparameter tuning.
+            </p>
+
+            <img class="img-fluid" src="Images/featureimportance.png" alt="">
+
+            <p>
+                The <a href="https://github.com/tim-mccabe/machine-learning-challenge/blob/master/starter_code/Kepler_random_forest.ipynb">next model</a> tested was a Random Forest Model. 
+                Random forest models are constructed by a multitude of decision trees. Unlike a normal decision tree, Random forest corrects for the habit of over fitting their 
+                training sets.
+            </p>
+
+            <img class="img-fluid" src="Images/random_forest.jpg" alt="">
+
+            <p>
+                This model gave us a slightly higher accuracey than the SVM.
+            </p> 
+
+            <img class="img-fluid" src="Images/random_forest_results.jpg" alt="">
+
+            <p>
+                Random forest classification report.
+            </p> 
+
+            <img class="img-fluid" src="Images/randomforest_classificationreport.png" alt="">
+
+          <p>Exoplanet Data Source by 
+            <a href="https://www.kaggle.com/nasa/kepler-exoplanet-search-results">Kaggle via Kepler Space Observatory</a>.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://www.kaggle.com/timmccabe">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/tim-mccabe-88a0a091/">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/tim-mccabe">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright © Tim McCabe</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/home_page.js"></script>
+
+  <!-- Our JS -->
+  <script type="text/javascript" src="js/map.js"></script>
+
+
+</body>
+
+</html>

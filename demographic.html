@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Earthquake Data</title>
+  <title>Health by Demographics</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,16 +20,11 @@
 
   <!-- Custom styles for this template -->
   <link href="css/home_page.css" rel="stylesheet">
+  <link href="css/demographic.css" rel="stylesheet">
 
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
-  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
-  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-
-  <!-- D3 cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+  <!-- D3 JS -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 
 </head>
 
@@ -63,17 +58,17 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('Images/San-andreas.png')">
+  <header class="masthead" style="background-image: url('Images/doctor.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Visualizing Earthquake Data</h1>
-            <h2 class="subheading">Data collected from the United States Geological Survey, or USGS</h2>
+            <h1>Health Risks Facing Particular Demographics</h1>
+            <h2 class="subheading">U.S. Census Bureau and the Behavioral Risk Factor Surveillance System</h2>
             <span class="meta">Posted by
               <a href="#">Tim McCabe</a>
-              on May 28, 2020</span>
+              on May 18, 2020</span>
           </div>
         </div>
       </div>
@@ -84,23 +79,14 @@
   <article>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <p>The USGS provides earthquake data in a number of different formats, updated every 5 minutes. 
-              Earthquakes occur much more often than people think. Most of them are to small to feel, but the Earth's tectonic plates are in constant motion. 
-              This map represents the data collected over the past 7 days of all earthquakes recorded by the USGS. 
-          </p>
-
-          <div id="map"></div>
-
-          <p>It is clear from this visual format that almost all earthquakes occur near fault lines of tectonic plates. Architects and engineers can use this data to 
-              build structures and buildings that will be able to withstand earthquakes. Many times in the past, cities with large populations were devestated 
-              by the natural disasters. Being able to understand this kind of data and use it in the design and construction of earthquake-safe structures will hopefully 
-              save lives and prevent cities from having to re-build after any significant earthquake.
-          </p>
-
-          <p>GeoJSON Data from 
-            <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">USGS</a>.
-          </p>
+        <div class="col-lg-10 col-md-10 mx-auto">
+            <div>
+                <p>Content</p>
+                <div class="chart">
+                    <!-- Append chart here -->
+                </div>
+                <p>Content</p>
+            </div>
         </div>
       </div>
     </div>
@@ -152,16 +138,9 @@
   <!-- Custom scripts for this template -->
   <script src="js/home_page.js"></script>
 
-  <!-- API key -->
-  <script type="text/javascript" src="js/config.js"></script>
   <!-- Our JS -->
-  <script type="text/javascript" src="js/earthquake.js"></script>
-
-  <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
-  <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
-
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <script src="js/demographic.js"></script>
 
 </body>
 
