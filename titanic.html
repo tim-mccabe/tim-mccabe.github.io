@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>First Steps into Machine Learning</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/home_page.css" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Blog</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tim-mccabe">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/tim-mccabe-88a0a091/">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('Images/titanic.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>First Steps into Machine Learning</h1>
+            <h2 class="subheading">Kaggle Titanic Competition</h2>
+            <span class="meta">Posted by
+              <a href="#">Tim McCabe</a>
+              on June 6, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>
+            When first learning the basics of machine learning, the first example problem that most data scientist try to tackle is The Titanic Problem. 
+            It is a Kaggle competition meant to familiarize yourself with how the kaggle platform works. The competition is simple: use machine learning to 
+            create a model that predicts which passengers survived the Titanic shipwreck. The great thing about this data set is that it is not too complex and relitively 
+            easy to understand for beginners. The data has very few columns (or features) and needs very little cleaning in order to create effective and accurate models.  
+          </p>
+
+          <img class="img-fluid" src="Images/titanic_raw_data.jpg" alt="">
+
+          <p>
+            The first step in solving any problem is knowing what your trying to find and knowing any other given informations. In this case, our unknown variable is the passenger 
+            survival. Our other given information is the data set above. So, now you know your starting point and end point for this project. The real question becomes how do you 
+            go from the start to the finish.
+          </p>
+
+          <p>
+            Before you start coding, it is important to map out how you plan to approch the problem. For this example, I will be using the Scikit-Learn library and some of its tools to build and train 
+            a model. Scikit-Learn and other tools like it have a lot of great <a href="https://scikit-learn.org/stable/tutorial/basic/tutorial.html#machine-learning-the-problem-setting">documantation</a> 
+            to help you understand what specific algorith to use and when to use it. Below is a flow chart, which is a great starting point for understanding which algorithms are 
+            appropriate to use depending on your data. 
+          </p>
+
+          <img class="img-fluid" src="Images/ml_map.jpg" alt="">
+
+          <p>
+            Now that you have a relatively good idea of where you are headed it is time to start planning how you are going to manipulate your data so it can be used in your model. 
+            By inspecting the data, you can see that much of it is categorical data. Columns like "Pclass" are already broken down into 1, 2, & 3 which the algorithms can use, but categorical data 
+            such as "Sex" are listed as male and female. For data in columns like "Sex", we need to convert the strings of male and female into numeric categories inorder to get an accurate 
+            output from the algorithms. 
+          </p>
+
+          <p>
+            The other kind of data that is in the data set is numeric data such as "Age" and "Fare". This data is not so simple in terms of simply converting stings into integers. 
+            However, it can be extremely useful to us once we start plotting this data to notice trends or patterns. 
+          </p>
+
+          <p>
+            Once all of this planning is done, you can now start to code and follow a basic 6 setp process. 
+            <ul>
+              <li>Read Data and Perform Basic Cleaning</li>
+              <li>Select your Features (columns)</li>
+              <li>Create a Train Test Split</li>
+              <li>Pre-Process (scale)</li>
+              <li>Train Model</li>
+              <li>Hyperparameter Tuning</li>
+            </ul>
+            Creating visualizations is a great way to select your features. This process is not always the easiest ot the quickest. With larger data sets, a trend or a pattern is 
+            not always obvious and can take several attempt of plots to finally see one. Below is just one example of the visualzations I used to try to see a pattern or correlation. 
+            I did make several more but I did not want to bog down this post with only charts. To see all follow this <a href="https://www.kaggle.com/timmccabe/kernel499e037e7a">link</a> 
+            to my kaggle notebook.
+          </p>
+
+          <img class="img-fluid" src="Images/titanic-plot.jpg" alt="">
+
+          <p>
+            Creating a train test split is very simple and basically separates your data into two data sets, one to train the model to make predictions and one to test how accurate 
+            those predictions are. Another reason why this machine learning example is great for beginners is this data is already split into training data and test data. 
+            Refering back to the flow chart above, we can now train the model with several Scikit-Learn algorithms. We can also see which ones were the most accurate to help us make 
+            the final predictions.
+          </p>
+
+          <img class="img-fluid" src="Images/titanic-algo-results.jpg" alt="">
+
+          <p>
+            After this is done, you can try hyperparameter tuning, but since this is just a beginner level project with a small data set, we will simply make our submission. Submissions 
+            for Kaggle competion have strict requiremnts. For this particular exercise, we have to submit a data frame with the first column as "PassengerId" and the second coulmn 
+            as "Survived". No other columns can be added otherwise your entry will not count. Kaggle compares your submitted data frame and compares it to the correct data and then judges the accuracey.
+          </p>
+
+          <img class="img-fluid" src="Images/titanic-results.jpg" alt="">
+
+          <p>
+            Once the results have been submitted, you will be scored and placed on the leaderboard. My first submission scored a 77.511% and this placed me in the top 58% of all 
+            competitors. This was only my first attempt at a Kaggle competiotion so I am ok with this result. As I do more projects and learn more about machine learning, I'm sure 
+            I could come back and get a higher score and try to be near the top of the leaderboard.
+          </p>
+
+          <p>Titanic Data Source by 
+            <a href="https://www.kaggle.com/c/titanic/overview">Kaggle via Titanic: Machine Learning from Disaster</a>.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://www.kaggle.com/timmccabe">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/tim-mccabe-88a0a091/">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/tim-mccabe">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright © Tim McCabe</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/home_page.js"></script>
+
+  <!-- Our JS -->
+
+
+</body>
+
+</html>
