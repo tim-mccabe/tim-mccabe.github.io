@@ -426,3 +426,7 @@ footer .copyright {
   height: 500px;
   display: inline-block;
 }
+
+.img-label {
+  text-align: center;
+}
