@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Rent Affordability</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/home_page.css" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Blog</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tim-mccabe">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/tim-mccabe-88a0a091/">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('Images/rent.png')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Nation Wide Housing Affordability Analysis</h1>
+            <h2 class="subheading">U.S. Census API Data</h2>
+            <span class="meta">Posted by
+              <a href="#">Tim McCabe</a>
+              on June 12, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>
+            Living in New York City, the first thing you notice is that apartments are not cheap at all. At first you think that not all 8 million people could possibly afford to live here. 
+            This is a thought I've had for a long time now. So I dove into the U.S. Census data to find out what makes New york so expensive. Once I started looking at the Census data, I started 
+            to think more big picture and see what areas in the U.S. are the most and least affordable. I then started to think of ideas of what factors affect the affordability of a city. 
+            Some of the first factors that came to mind were population size, median income, location or proximity to major cities, unemployment, and poverty level. 
+          </p>
+
+          <p>
+              The U.S. Census makes all of its data available to the public through an API. The Census API can be a little tricky to get the information you are looking for, so if you want to try it 
+              for yourself, I would suggest to closely reading the documentation that can be found on the <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques">Census website</a>. 
+              The data is not set up in the most friendly format, so cleaning, manipulating, and converting will take a good amount of time and be very frustrating at points. After digging into the data 
+              we realized that there were a good amount of missing data points which could possibly lead to some problems down the road. However, this data set is large enough where I didn't need to 
+              investigate further. 
+          </p>
+
+          <p>
+              The first factor I looked into was the population compared to the cost of living (rent + utilities). The data I pulled was from 2011 to 2015, and I wanted to see if there was a trend 
+              year to year. The first visualization I did was just a scatter plot of this data, but each year looked about the same. The only difference is that from 2011 to 2014, that the cost 
+              of livving looks it was capped and cuts off at at $2,000 a month. In 2015, this data was more accurately collected and shows the actual distribution much better. This can be seen in 
+              the scatter plots below. Each data point represents each zip code in the census data.
+          </p>
+
+          <img class="img-fluid" src="Images/pop_vs_rent_2011.jpg" alt="">
+
+          <img class="img-fluid" src="Images/pop_vs_rent_2015.jpg" alt="">
+
+          <p>
+              The next factor I looked into was the median household income. I made a similar scatter plot to see the comparison of cost of living to the median household income. The same problem 
+              occured with the rent data being cut off for all years prior to 2015. Each data point represents each zip code in the census data.
+          </p>
+
+          <img class="img-fluid" src="Images/rent_vs_income_2011.jpg" alt="">
+
+          <img class="img-fluid" src="Images/rent_vs_income_2015.jpg" alt="">
+
+          <p>
+              From the above scatter plots, it is very clear to see that there is a relatively strong correlation between cost of living and household income. This makes sense that in areas where 
+              people make more money, the cost of living is higher. This could be that people in those areas are living in nicer homes/apartments or that landlords are charging more because 
+              they know people can afford to pay more. That question will have to be answered on another day with more analysis.
+          </p>
+
+          <p>
+              The population does not give a very clear visualization wheater it has an impact on cost of living ore not. However, looking at the income scatter plots, it is clear to see that in the 
+              bottom right corner of the plot almost all points are a darker color and indicate a higher population. This shows that areas with larger populations are, on average, making 
+              less per house hold. 
+          </p>
+
+          <p>
+              I continued my analysis to see if the unemployment rate or poverty rate changing affected the cost of living over time line of the data. Below are some line charts that 
+              show possible trends of these factors affecting the cost of rent. The affordability rate is simply calculated by taking the cost of living and dividing by median household income.
+          </p>
+
+          <img class="img-fluid" src="Images/line_chart_1.jpg" alt="">
+
+          <img class="img-fluid" src="Images/line_chart_2.jpg" alt="">
+
+          <img class="img-fluid" src="Images/line_chart_3.jpg" alt="">
+
+          <p>
+              In the years sampled from the above charts, one thing that is obvious is that the unemployment rate and has decresed and income has increased from 2013 onward. 
+              The affordabilty rate has also increased but looks like its starting to flatten towards 2014 and 2015, meanwhile the cost of is steadily increasing and shows little 
+              signs of flattening. It is difficult to draw the conclusion that income and unemployment have lead to the increase in rent. I think more analysis is needed and more 
+              data outside of the US Census need to be factored in.
+          </p>
+
+          <p>
+              I also created a heat map, using Google Maps Api, of household income and affordability rates to see income distribution across the U.S. and to see where it is most affordable to live. 
+              This map is also a great visualization to see where you have missing data points or null values in your data. This is the reason for the gaps in the map.
+          </p>
+
+          <img class="img-fluid" src="Images/income_map.jpg" alt="">
+
+          <img class="img-fluid" src="Images/affordability_map.jpg" alt="">
+
+          <p>
+              Major cities seem to be have the highest incomes while also being the least affordable places. Further analysis maybe to look at how many people have moved in and out of those 
+              in the past decade. Has an influx of people moving out of the suburbs and into the cities caused prices to increase so much? It is definetly something worth looking into.
+          </p>
+
+          <p>All Data Source by 
+            <a href="https://www.census.gov/data/developers/data-sets.html">US Census</a>.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://www.kaggle.com/timmccabe">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/tim-mccabe-88a0a091/">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/tim-mccabe">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright © Tim McCabe</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/home_page.js"></script>
+
+  <!-- Our JS -->
+
+
+</body>
+
+</html>
