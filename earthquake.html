@@ -85,17 +85,37 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>The USGS provides earthquake data in a number of different formats, updated every 5 minutes. 
-              Earthquakes occur much more often than people think. Most of them are to small to feel, but the Earth's tectonic plates are in constant motion. 
-              This map represents the data collected over the past 7 days of all earthquakes recorded by the USGS. 
+
+          <h3>
+            Overview
+          </h3>
+
+          <p>
+              Earthquakes occur much more often than people think. Most of them are to small to feel, but the Earth's tectonic plates are in constant motion. The USGS collects massive amounts 
+              of data from all over the world each day, but this data needs to be displayed in a way for people to understand what is happening. The USGS provides earthquake data in a number 
+              of different formats, updated every 5 minutes. This interactive map represents the data collected over the past 7 days of all earthquakes recorded by the USGS. 
           </p>
 
           <div class="img-fluid" id="map"></div>
 
+          <h3>
+            Process
+          </h3>
+
+          <p>
+            The USGS website provides the public with all its earthquake data in GeoJSON format API and gives a preview of the output on a neatly displayed web page. The API I used 
+            for creating this map was the 7-day data but it also provides other timelines, such as the past day or hour. A comparison of different maps over different periods of time could 
+            be useful in planning earthquake safety precautions. Using Leaflet software, I was able to map out and visualize the data 
+            from the API and show the data in an understandable way. Going forward, this map could be improved with some filters based on magnitude or location. 
+            Perhaps someone with more knowledge about what to look for to help prevent catastrophes could give me some suggestions.
+          </p>
+
+          <h3> Conclusion</h3>
+
           <p>It is clear from this visual format that almost all earthquakes occur near fault lines of tectonic plates. Architects and engineers can use this data to 
               build structures and buildings that will be able to withstand earthquakes. Many times in the past, cities with large populations were devestated 
               by the natural disasters. Being able to understand this kind of data and use it in the design and construction of earthquake-safe structures will hopefully 
-              save lives and prevent cities from having to re-build after any significant earthquake.
+              save lives and prevent cities from having to re-build after any significant earthquake. 
           </p>
 
           <p>GeoJSON Data from 

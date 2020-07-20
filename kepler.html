@@ -82,67 +82,82 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Over a period of nine years in deep space, the NASA Kepler space telescope has been out on a planet-hunting mission to 
-              discover hidden planets outside of our solar system. To help process this data, I created two machine learning models 
-              capable of classifying candidate exoplanets from the raw dataset.
-            </p>
 
-            <p>The approach used for creating these models was based around using the Python library Scikit-learn. This library is extremely useful when dealing with numerical data, 
-                similar to the data provided by the <a href="https://www.kaggle.com/nasa/kepler-exoplanet-search-results">Kepler Space Observatory</a>. The first step with any dataset 
-                is to read in the data and perform some basic cleaning. The next step is to select the features (columns of data) and create a train test split. This basically separates 
-                the data you want to use in order to predict an outcome and then creates two groups of data. One group of data to train your model and another to test it. In simpler terms, 
-                the data will get get randomly sorted into two groups, one group contain roughly 70% of the data points and the second group will have the other 30%. The separation does not have 
-                to be exactly 70% / 30% split but this is pretty common for most models. The larger set of data will be used to run algorithms on and make predictions and the smaller set of data 
-                will be used as a comparison for those predictions to see how accurate they are.
-            </p>
+          <h3>
+            Problem
+          </h3>
 
-            <p>
-                Before running any type of algorithm to make predictions, the data mus be pre-processed (scaled). Once this is done, it is time to train the model. There are so many ways to 
-                train models and as a Data Scientist or Machine Learning Engineer, it is up to you to decide which is the best method of training. The <a href="https://github.com/tim-mccabe/machine-learning-challenge/blob/master/starter_code/Kepler_svm.ipynb">first model</a>
-                run on the data was an SVM (support-vector machines), which was fairly accurate in detrmining the outcome. However, it is important to train and test multiple models to insure 
-                reliability and accuracy.
-            </p>
+          <p>
+            Over a period of nine years in deep space, the NASA Kepler space telescope has been on a planet-hunting mission to 
+            discover hidden planets outside of our solar system. To help process this data, I created two machine learning models 
+            capable of classifying candidate exoplanets from the raw dataset.
+          </p>
 
-            <img class="img-fluid" src="Images/svm_example.png" alt="">
+          <h3>
+            Process
+          </h3>
 
-            <p>
-                Support Vector Machine visualization
-            </p>
+          <p>
+            The approach used for creating these models were based around using the Python library Scikit-learn. This library is extremely useful when dealing with numerical data, 
+            similar to the data provided by the <a href="https://www.kaggle.com/nasa/kepler-exoplanet-search-results">Kepler Space Observatory</a>. The first step with any dataset 
+            is to read in the data and perform some basic cleaning. The next step is to select the features (columns of data) and create a train test split. This basically separates 
+            the data you want to use in order to predict an outcome and then creates two groups of data. One group of data to train your model and another to test it. In simpler terms, 
+            the data will get randomly sorted into two groups, one group contain roughly 70% of the data points and the second group will have the other 30%. The separation does not have 
+            to be exactly 70% / 30% split but this is pretty common for most models. The larger set of data will be used to run algorithms on and make predictions and the smaller set of data 
+            will be used as a comparison for those predictions to see how accurate they are.
+          </p>
 
-            <img class="img-fluid" src="Images/svm.jpg" alt="">
+          <p>
+            Before running any type of algorithm to make predictions, the data must be pre-processed (scaled). Once this is done, it is time to train the model. There are so many ways to 
+            train models and as a Data Scientist or Machine Learning Engineer, it is up to you to decide which is the best method of training. The <a href="https://github.com/tim-mccabe/machine-learning-challenge/blob/master/starter_code/Kepler_svm.ipynb">first model</a>
+            run on the data was an SVM (support-vector machines), which was fairly accurate in determining the outcome. However, it is important to train and test multiple models to insure 
+            reliability and accuracy.
+          </p>
 
-            <p>
-                SVM model results
-            </p>
+          <img class="img-fluid" src="Images/svm_example.png" alt="">
 
-            <p>
-                Hyperparameter tuning is the next step to making the most accurate predictions. Hyperparameter tuning in a nut shell is deciding what features should be going into 
-                the model. For example, as a Data Scientist, this is where you would have to decide how deep a decision tree should be, what features go into a linear model, or how many 
-                neurons and layers will go into a neural network. There are so many more examples but it would be too long to list. The next model tested was a Random Forest Model. 
-                Below is a chart displaying each features importance which is extremely helpful when hyperparameter tuning.
-            </p>
+          <p>
+            Support Vector Machine visualization
+          </p>
 
-            <img class="img-fluid" src="Images/featureimportance.png" alt="">
+          <h3>
+            Results
+          </h3>
 
-            <p>
-                The <a href="https://github.com/tim-mccabe/machine-learning-challenge/blob/master/starter_code/Kepler_random_forest.ipynb">next model</a> tested was a Random Forest Model. 
-                Random forest models are constructed by a multitude of decision trees. Unlike a normal decision tree, Random forest corrects for the habit of over fitting their 
-                training sets.
-            </p>
+          <img class="img-fluid" src="Images/svm.jpg" alt="">
 
-            <img class="img-fluid" src="Images/random_forest.jpg" alt="">
+          <p>
+            SVM model results
+          </p>
 
-            <p>
-                This model gave us a slightly higher accuracey than the SVM.
-            </p> 
+          <p>
+            Hyperparameter tuning is the next step to making the most accurate predictions. Hyperparameter tuning in a nutshell is deciding what features should be going into 
+            the model. For example, as a Data Scientist, this is where you would have to decide how deep a decision tree should be, what features go into a linear model, or how many 
+            neurons and layers will go into a neural network. There are so many more examples, but it would be too long to list. The next model tested was a Random Forest Model. 
+            Below is a chart displaying each features importance which is extremely helpful when hyperparameter tuning.
+          </p>
 
-            <img class="img-fluid" src="Images/random_forest_results.jpg" alt="">
+          <img class="img-fluid" src="Images/featureimportance.png" alt="">
 
-            <p>
-                Random forest classification report.
-            </p> 
+          <p>
+            The <a href="https://github.com/tim-mccabe/machine-learning-challenge/blob/master/starter_code/Kepler_random_forest.ipynb">next model</a> tested was a Random Forest Model. 
+            Random Forest models are constructed by a multitude of decision trees. Unlike a normal decision tree, Random forest corrects for the habit of over fitting its 
+            training sets.
+          </p>
 
-            <img class="img-fluid" src="Images/randomforest_classificationreport.png" alt="">
+          <img class="img-fluid" src="Images/random_forest.jpg" alt="">
+
+          <p>
+            This model gave us a slightly higher accuracey than the SVM.
+          </p> 
+
+          <img class="img-fluid" src="Images/random_forest_results.jpg" alt="">
+
+          <p>
+            Random forest classification report.
+          </p> 
+
+          <img class="img-fluid" src="Images/randomforest_classificationreport.png" alt="">
 
           <p>Exoplanet Data Source by 
             <a href="https://www.kaggle.com/nasa/kepler-exoplanet-search-results">Kaggle via Kepler Space Observatory</a>.</p>
