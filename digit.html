@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Digit Recognizer</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/home_page.css" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Blog</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tim-mccabe">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/tim-mccabe-88a0a091/">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('Images/digit/digit.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Digit Recognizer</h1>
+            <h2 class="subheading">Kaggle: Learn computer vision fundamentals with the famous MNIST data</h2>
+            <span class="meta">Posted by
+              <a href="#">Tim McCabe</a>
+              on June 24, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h3>
+          Overview
+        </h3>
+
+        <p>
+          MNIST ("Modified National Institute of Standards and Technology") is the de facto “hello world” dataset of computer vision. Since its release in 1999, 
+          this classic dataset of handwritten images has served as the basis for benchmarking classification algorithms. As new machine learning techniques emerge, 
+          MNIST remains a reliable resource for researchers and learners alike. In this competition, the goal is to correctly identify digits from a dataset of tens 
+          of thousands of handwritten images.
+        </p>
+
+        <p>
+          This project is my first attempt creating a neural network, specifically a CNN (Convolutional Neural Network). The overall process for machine learning projects is 
+          still very similar to others on the blog, but this time, instead of using Scikit-Learn's library of algorithms, I used the Keras API (Tensorflow backend) to create a neural network. 
+          In this blog post, I will be highlighting the key steps in solving this kind of problem and for the full python notebook, you can find that in this link to my 
+          <a href="https://www.kaggle.com/timmccabe/kernel48218b2136"> Kaggle notebook here.</a> 
+        </p>
+
+        <h3>
+          Process
+        </h3>
+
+        <p>
+          <b>View Data: </b>
+          The dataset provided by MNIST is an iconic data set to get your bearings when it comes to learning ML. The data provided is already split into a training and test set, 
+          so that step is already done. Before cleaning the data, it is important to see what the data looks like. Once you know what it looks like, you can determine what needs to be 
+          done in order to clean and prepare the data for the model you decide to build. Below is histogram of the data distribution.
+        </p>
+
+        <img class="img-fluid" src="Images/digit/bar_graph.jpg" alt="" id="center">
+
+        <div class="img-label">
+          <h5>
+              Histogram of Data Distribution
+          </h5>
+        </div>
+
+        <p>
+          <b>Normalize: </b>
+          After checking for any null values in the pixels of each picture, I am ready to begin normalizing the data. Normalizing data is essentially changing the numeric values in the data 
+          to a common size, without distorting the differences in the range of values. With this data, the normailizing I performed is grayscale normalization. By doing this, it reduces the effect 
+          of illumination and color differences. Since colors are measured by RGB values of 255, dividing each pixle (data point) by 255 the model will run much faster over values from 0 to 1 
+          than values from 0 to 255. Now that the normalizing is done, I began to reshape the data. 
+        </p>
+
+        <img class="img-fluid" src="Images/digit/example_digit.jpg" alt="" id="center">
+
+        <div class="img-label">
+          <h5>
+              Preview of One Image
+          </h5>
+        </div>
+
+        <p>
+          <b>Reshape: </b>
+          The data provided are images that are 28x28 px images that has been put into a Pandas Dataframe as a 1D vector of 784 values (28 squared). Keras requires an extra dimension in 
+          the end which correspond to channels. MNIST images are gray scaled so it use only one channel. For RGB images, there is 3 channels, we would have reshaped 784px vectors to 28x28x3 
+          3D matrices.
+        </p>
+
+        <img class="img-fluid" src="Images/digit/reshape.jpg" alt="" id="center">
+
+        <p>
+          <b>Label Encoding: </b>
+          The labels for the data are the digit numbers from 0 to 9 and these need to be encoded. This way, instead of the labels being the digits themselves, they will become a vector 
+          of a series of 0s and 1s. For example the digit 4 will look like this [0,0,0,0,1,0,0,0,0,0] and the digit 9 will look like [0,0,0,0,0,0,0,0,0,1]. This transformation should be 
+          used to encode target values, i.e. Y, and not the input X. It can also be used to transform non-numerical labels (as long as they are hashable and comparable) to numeric labels. 
+        </p>
+
+        <img class="img-fluid" src="Images/digit/label_encoder.jpg" alt="" id="center">
+
+        <p>
+          <b>Defining the Model: </b>
+          The model I decided to build is a CNN (Convolutional Neural Network). Using the Keras API, the framework is relatively simple and you just have to add one layer of the network at 
+          a time. The first is the convolutional (Conv2D) layer. It is like a set of learnable filters. Each filter transforms a part of the image (defined by the kernel size) using the 
+          kernel filter. The kernel filter matrix is applied on the whole image. Filters can be seen as a transformation of the image. The second layer I used in CNN is the pooling 
+          (MaxPool2D) layer. This filter takes two adjacent pixels and uses the maximum value. This layer is often used to reduce the amount of computing and overfitting. When datasets become 
+          very large computing cost is an important factor to consider. The next layer that I added is the Dropout layer. Dropoout is a regularization method where a proportion of nodes in 
+          the layer are randomly ignored (setting their wieghts to zero) for each training sample. This forces the model to learn with random pieces of the image dropped from the original image. 
+          It is another technique that helps with over fitting the model and improves generlizations. In order to add some non linearity to the network, the Relu rectifier is added. 
+          The Flatten layer is use to convert the final feature maps into a one single 1D vector. It combines all the found local features of the previous convolutional layers.
+          In the last layer(Dense(10,activation="softmax")) the net outputs distribution of probability of each class.
+        </p>
+
+        <img class="img-fluid" src="Images/digit/CNN_arch.jpg" alt="" id="center">
+
+        <div class="img-label">
+          <h5>
+              CNN Architechture
+          </h5>
+        </div>
+
+        <p>
+          <b>Setting the Optimizer and Annealer: </b>
+          A score function, loss function, and optimisation algorithm are essential parts of understanding what the model is doing and how well it is performing. The loss function is a measure 
+          of how incorrect the model is. It is the error between observed labels and predicted ones. In this case, since the data is set up as classifications from encoding it, the 
+          "categorical_crossentropy" function will be used. More importantly, the optimizer must also be defined because imporve the parameters to minimize the loss by filtering kernel values and 
+          eliminating bias of neurons. The metric function "accuracey" is used to evaluate the performance of the model, pretty much the opposite of the loss function.
+        </p>
+
+        <img class="img-fluid" src="Images/digit/optimizer.jpg" alt="" id="center">
+
+        <p>
+          To make the optimizer coverage faster and minimize the loss function, I used an annealing method of the learning rate. With the ReduceLROnPlateau function from Keras.callbacks, 
+          I choose to reduce the learning rate by half if the accuracy is not improved after 3 epochs. (An epoch is one cycle through the full training dataset)
+        </p>
+
+        <img class="img-fluid" src="Images/digit/learning_rate.jpg" alt="" id="center">
+
+        <p>
+          <b>Data Augmentation: </b>
+          When it comes to improving the model, you can always try to make your dataset larger, so it has more to learn from. This works but is inefficient and not always possible. In 
+          the case of the images, the purpose of this step is to slightly change the images so the model can learn more efficiently. Some popular augmentations people use are grayscales, 
+          horizontal flips, vertical flips, random crops, color jitters, translations, rotations, and much more. By adding these augmentations, you could easily double or tripple the size of 
+          your data. 
+        </p>
+
+        <img class="img-fluid" src="Images/digit/data_augmentation.jpg" alt="" id="center">
+
+        <h3>
+          Results
+        </h3>
+
+        <p>
+          <b>Evaluation of the Model: </b>
+          It is important to always evaluate the results and check your work. A great way to see just how accurate out model performed is to plot a confusion matrix.
+        </p>
+
+        <img class="img-fluid" src="Images/digit/matrix.jpg" alt="" id="center">
+
+        <p>
+          From the bottom left of the martix, you can see that there are some trends of inaccuracey. My first thought is that if I increased the epochs or number of cycles, those numbers 
+          would become more accurate. Not everyone has the neatest hand writing so, lets see some of the digits the mode predicted incorrectly. Perhaps these digits are written so poorly, 
+          most humans would misread them. 
+        </p>
+
+        <img class="img-fluid" src="Images/digit/errors.jpg" alt="" id="center">
+
+        <h3>
+          Next Steps
+        </h3>
+
+        <p>
+          This kind of model is used more broadly and for more practical applications each year. The most common would probably for something like mobile checking deposits. Your phone 
+          can take a picture and recognize the digits printed on the checks being deposited. If it has not been implimented already, I have a feeling that lots of publications will use 
+          this to digitize old documents or articles that only exizted in print and digital copies did not exist when these items were written. This would allow publishers, like 
+          The New York Times, to create databases that are easily searchable for historical articles. Another industry that could use this is the leagal industry. Instead of pouring 
+          through filing cabinets of old documents and volumes of books, a digitized databased could save them hours searching.
+        </p>
+
+        <p>Data Source by 
+            <a href="https://www.kaggle.com/c/digit-recognizer">Kaggle Digit Recognizer Competition</a>.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://www.kaggle.com/timmccabe">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/tim-mccabe-88a0a091/">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/tim-mccabe">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright © Tim McCabe</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/home_page.js"></script>
+
+  <!-- Our JS -->
+
+
+</body>
+
+</html>
