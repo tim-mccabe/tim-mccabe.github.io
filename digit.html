@@ -123,8 +123,8 @@
         <p>
           <b>Normalize: </b>
           After checking for any null values in the pixels of each picture, I am ready to begin normalizing the data. Normalizing data is essentially changing the numeric values in the data 
-          to a common size, without distorting the differences in the range of values. With this data, the normailizing I performed is grayscale normalization. By doing this, it reduces the effect 
-          of illumination and color differences. Since colors are measured by RGB values of 255, dividing each pixle (data point) by 255 the model will run much faster over values from 0 to 1 
+          to a common size, without distorting the differences in the range of values. With this data, the normalizing I performed is grayscale normalization. By doing this, it reduces the effect 
+          of illumination and color differences. Since colors are measured by RGB values of 255, dividing each pixel (data point) by 255 the model will run much faster over values from 0 to 1 
           than values from 0 to 255. Now that the normalizing is done, I began to reshape the data. 
         </p>
 
@@ -139,7 +139,7 @@
         <p>
           <b>Reshape: </b>
           The data provided are images that are 28x28 px images that has been put into a Pandas Dataframe as a 1D vector of 784 values (28 squared). Keras requires an extra dimension in 
-          the end which correspond to channels. MNIST images are gray scaled so it use only one channel. For RGB images, there is 3 channels, we would have reshaped 784px vectors to 28x28x3 
+          the end which correspond to channels. MNIST images are gray scaled so it uses only one channel. For RGB images, there is 3 channels, we would have reshaped 784px vectors to 28x28x3 
           3D matrices.
         </p>
 
@@ -156,13 +156,13 @@
 
         <p>
           <b>Defining the Model: </b>
-          The model I decided to build is a CNN (Convolutional Neural Network). Using the Keras API, the framework is relatively simple and you just have to add one layer of the network at 
+          The model I decided to build is a CNN (Convolutional Neural Network). Using the Keras API, the framework is relatively simple, and you just have to add one layer of the network at 
           a time. The first is the convolutional (Conv2D) layer. It is like a set of learnable filters. Each filter transforms a part of the image (defined by the kernel size) using the 
           kernel filter. The kernel filter matrix is applied on the whole image. Filters can be seen as a transformation of the image. The second layer I used in CNN is the pooling 
           (MaxPool2D) layer. This filter takes two adjacent pixels and uses the maximum value. This layer is often used to reduce the amount of computing and overfitting. When datasets become 
           very large computing cost is an important factor to consider. The next layer that I added is the Dropout layer. Dropoout is a regularization method where a proportion of nodes in 
-          the layer are randomly ignored (setting their wieghts to zero) for each training sample. This forces the model to learn with random pieces of the image dropped from the original image. 
-          It is another technique that helps with over fitting the model and improves generlizations. In order to add some non linearity to the network, the Relu rectifier is added. 
+          the layer are randomly ignored (setting their weights to zero) for each training sample. This forces the model to learn with random pieces of the image dropped from the original image. 
+          It is another technique that helps with over fitting the model and improves generalizations. In order to add some non-linearity to the network, the Relu rectifier is added. 
           The Flatten layer is use to convert the final feature maps into a one single 1D vector. It combines all the found local features of the previous convolutional layers.
           In the last layer(Dense(10,activation="softmax")) the net outputs distribution of probability of each class.
         </p>
@@ -177,10 +177,10 @@
 
         <p>
           <b>Setting the Optimizer and Annealer: </b>
-          A score function, loss function, and optimisation algorithm are essential parts of understanding what the model is doing and how well it is performing. The loss function is a measure 
+          A score function, loss function, and optimization algorithm are essential parts of understanding what the model is doing and how well it is performing. The loss function is a measure 
           of how incorrect the model is. It is the error between observed labels and predicted ones. In this case, since the data is set up as classifications from encoding it, the 
-          "categorical_crossentropy" function will be used. More importantly, the optimizer must also be defined because imporve the parameters to minimize the loss by filtering kernel values and 
-          eliminating bias of neurons. The metric function "accuracey" is used to evaluate the performance of the model, pretty much the opposite of the loss function.
+          "categorical_crossentropy" function will be used. More importantly, the optimizer must also be defined because improve the parameters to minimize the loss by filtering kernel values and 
+          eliminating bias of neurons. The metric function "accuracy" is used to evaluate the performance of the model, pretty much the opposite of the loss function.
         </p>
 
         <img class="img-fluid" src="Images/digit/optimizer.jpg" alt="" id="center">
@@ -196,7 +196,7 @@
           <b>Data Augmentation: </b>
           When it comes to improving the model, you can always try to make your dataset larger, so it has more to learn from. This works but is inefficient and not always possible. In 
           the case of the images, the purpose of this step is to slightly change the images so the model can learn more efficiently. Some popular augmentations people use are grayscales, 
-          horizontal flips, vertical flips, random crops, color jitters, translations, rotations, and much more. By adding these augmentations, you could easily double or tripple the size of 
+          horizontal flips, vertical flips, random crops, color jitters, translations, rotations, and much more. By adding these augmentations, you could easily double or triple the size of 
           your data. 
         </p>
 
@@ -214,8 +214,8 @@
         <img class="img-fluid" src="Images/digit/matrix.jpg" alt="" id="center">
 
         <p>
-          From the bottom left of the martix, you can see that there are some trends of inaccuracey. My first thought is that if I increased the epochs or number of cycles, those numbers 
-          would become more accurate. Not everyone has the neatest hand writing so, lets see some of the digits the mode predicted incorrectly. Perhaps these digits are written so poorly, 
+          From the bottom left of the matrix, you can see that there are some trends of inaccuracy. My first thought is that if I increased the epochs or number of cycles, those numbers 
+          would become more accurate. Not everyone has the neatest handwriting so, let us see some of the digits the mode predicted incorrectly. Perhaps these digits are written so poorly, 
           most humans would misread them. 
         </p>
 
@@ -227,9 +227,9 @@
 
         <p>
           This kind of model is used more broadly and for more practical applications each year. The most common would probably for something like mobile checking deposits. Your phone 
-          can take a picture and recognize the digits printed on the checks being deposited. If it has not been implimented already, I have a feeling that lots of publications will use 
-          this to digitize old documents or articles that only exizted in print and digital copies did not exist when these items were written. This would allow publishers, like 
-          The New York Times, to create databases that are easily searchable for historical articles. Another industry that could use this is the leagal industry. Instead of pouring 
+          can take a picture and recognize the digits printed on the checks being deposited. If it has not been implemented already, I have a feeling that lots of publications will use 
+          this to digitize old documents or articles that only existed in print and digital copies did not exist when these items were written. This would allow publishers, like 
+          The New York Times, to create databases that are easily searchable for historical articles. Another industry that could use this is the legal industry. Instead of pouring 
           through filing cabinets of old documents and volumes of books, a digitized databased could save them hours searching.
         </p>
 
