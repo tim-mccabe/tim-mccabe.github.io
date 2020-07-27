@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Credit Card Fraud Detection</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/home_page.css" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Blog</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tim-mccabe">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/tim-mccabe-88a0a091/">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('Images/credit_card.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Credit Card Fraud Detection</h1>
+            <h2 class="subheading">Kaggle: Anonymized credit card transactions labeled as fraudulent or genuine</h2>
+            <span class="meta">Posted by
+              <a href="#">Tim McCabe</a>
+              on June 16, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h3>
+          Overview
+        </h3>
+
+        <p>
+          It is important that credit card companies are able to recognize fraudulent credit card transactions so that customers are not charged for items that they did not purchase. 
+          Cyber security is more important now more than ever. Now a days, people have their entire wallet on their mobile phone along with other importnant data that could be 
+          to harm you or others. Is it possible for companies to help prevent false transactions before they happen? With the help of machine learning, companies have been able to 
+          stop most suspicious transactions from taking place. 
+        </p>
+
+        <p>
+          The datasets contains transactions made by credit cards in September 2013 by european cardholders. This dataset presents transactions that occurred in two days, 
+          where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions.
+        </p>
+
+        <p>
+          It contains only numerical input variables which are the result of a PCA transformation. Unfortunately, due to confidentiality issues, we cannot provide the original 
+          features and more background information about the data. Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been 
+          transformed with PCA are 'Time' and 'Amount'. Feature 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset. 
+          The feature 'Amount' is the transaction Amount, this feature can be used for example-dependant cost-senstive learning. Feature 'Class' is the response variable and it 
+          takes value 1 in case of fraud and 0 otherwise.
+        </p>
+
+        <h3>
+          Process
+        </h3>
+
+        <P>
+          This projects will be a walk through of a Keras neural network. This data is highly imbalanced, meaning that between the categories of fraudulaent and not fraudulent, 
+          more then 99% of the data is not fraudulent.
+        </P>
+
+        <img class="img-fluid" src="Images/credit_card/positive_samples.jpg" alt="" id="center">
+
+        <p>
+          This data is all numerical and since the features are all unknown, there is no real cleaning to be done. Since no cleaning is needed and no real feature selections, 
+          I just needed create a training and validation set. I will not be using Pandas to create a DataFrame, instead I am going to vectorize the given CSV file.
+        </p>
+
+        <img class="img-fluid" src="Images/credit_card/vectorizing.jpg" alt="" id="center">
+
+        <p>
+          Preparing the validation set is very straight forward and below is the syntax I used. 
+        </p>
+
+        <img class="img-fluid" src="Images/credit_card/train_test_split.jpg" alt="" id="center">
+
+        <p>
+          Next, I tried my best to normalize the data with some simple statistical methods. I used the Numpy library to gather the mean and standard deviation of the training and 
+          validation sets. Once that was taken care of, I started to build the layers to my neural network. I made this model using sequential layers, utilizing Dense and Dropout. 
+          Below is the architecture of the network.
+        </p>
+
+        <img class="img-fluid" src="Images/credit_card/classification_model.jpg" alt="" id="center">
+
+        <p>
+          Once the model has been defined, I compiled and fit the model to see the results of the model. I defined some metricts to look for to be part of the model's optimizer. 
+          I defined callbacks and then fit the model. After running it, I could see all the results after each epoch runs and compare to see how well the model is performing.
+        </p>
+
+        <img class="img-fluid" src="Images/credit_card/training_model.jpg" alt="" id="center">
+
+        <img class="img-fluid" src="Images/credit_card/epoch_1.jpg" alt="" id="center">
+
+        <img class="img-fluid" src="Images/credit_card/epoch_29.jpg" alt="" id="center">
+
+        <p>
+          From the results, it looks like 415 out of the 417 fraudulaent charges were identified. The model also detected over 2,000 charges that were not fraudulaent. This is probably 
+          to many false positives to apply into actual application. This model would probably need more adjusting, and a more indepth dive into each feature would probably help 
+          find the problem where the model is off. But in the end, it is better to be safe than sorry when it comes to other peoples money.
+        </p>
+
+        <p>Data Source by 
+            <a href="https://www.kaggle.com/mlg-ulb/creditcardfraud/">Kaggle Credit Card Fraud Detection Competition</a>.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://www.kaggle.com/timmccabe">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/tim-mccabe-88a0a091/">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/tim-mccabe">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright © Tim McCabe</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/home_page.js"></script>
+
+  <!-- Our JS -->
+
+
+</body>
+
+</html>
