@@ -312,6 +312,29 @@ def check_winning_move(obs, config, col, piece):
         </p>
 
         <p>
+          The agent that gets created from the neural network is on using the <a href="https://openai.com/blog/openai-baselines-ppo/">Proximal Policy Optimization (PPO)</a>. 
+          Below is some of the code and architecture of the neural newtork.
+        </p>
+
+        <p>
+          <pre><code class="python">
+from stable_baselines import PPO1 
+from stable_baselines.a2c.utils import conv, linear, conv_to_fc
+from stable_baselines.common.policies import CnnPolicy
+
+# Neural network for predicting action values
+def modified_cnn(scaled_images, **kwargs):
+    activ = tf.nn.relu
+    layer_1 = activ(conv(scaled_images, 'c1', n_filters=32, filter_size=3, stride=1, 
+                          init_scale=np.sqrt(2), **kwargs))
+    layer_2 = activ(conv(layer_1, 'c2', n_filters=64, filter_size=3, stride=1, 
+                          init_scale=np.sqrt(2), **kwargs))
+    layer_2 = conv_to_fc(layer_2)
+    return activ(linear(layer_2, 'fc1', n_hidden=512, init_scale=np.sqrt(2))) 
+          </code></pre>
+        </p>
+
+        <p>
           All of the code can be found on my <a href="https://github.com/tim-mccabe/ML-Basics/tree/master/game_AI_and_reinforcement_learning">Github page</a> 
           but I won't show all of the code in this blog. I will show how the model improves overtime by plotting the results after every 
           interation. 
